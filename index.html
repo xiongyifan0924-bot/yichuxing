@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#F7F7F8">
+<title>宜出行 · 看天，再决定去哪</title>
+<meta name="description" content="告诉我目的地、日期和想做的事，直接得到该不该去、哪天去最好。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <header class="brand">
+    <h1><em>宜</em>出行</h1>
+    <p>看天，再决定去哪</p>
+  </header>
+
+  <section class="ask" id="ask">
+    <label class="ask-label" for="q">说说你的出行计划</label>
+    <textarea id="q" rows="3" placeholder="比如：10.3-10.6 去连云港连岛旅游怎么样"></textarea>
+
+    <div class="readout" id="readout"></div>
+
+    <button type="button" class="cta" id="go">看看哪天合适</button>
+    <p class="err" id="err" hidden></p>
+
+    <div class="examples">
+      <span>试试</span>
+      <button type="button" data-q="这周末去青岛看海怎么样">这周末去青岛看海</button>
+      <button type="button" data-q="10.1-10.5 想去爬泰山">10.1-10.5 爬泰山</button>
+      <button type="button" data-q="国庆去三亚赶海">国庆去三亚赶海</button>
+      <button type="button" data-q="接下来三天去杭州逛逛">接下来三天逛杭州</button>
+    </div>
+  </section>
+
+  <section class="summary" id="summary" hidden>
+    <div class="sm-main" id="sm-main"></div>
+    <button type="button" class="sm-edit" id="sm-edit">修改</button>
+  </section>
+
+  <section id="result" class="result" hidden></section>
+
+  <footer class="foot">数据来源 Open-Meteo · 决策建议仅供参考</footer>
+
+</div>
+
+<script src="cities.js"></script>
+<script src="advice.js"></script>
+<script src="parse.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
